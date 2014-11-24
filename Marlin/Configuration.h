@@ -92,7 +92,7 @@
 #define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 0
 
 // Actual temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 10  // (seconds)
@@ -228,7 +228,7 @@
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
 const bool X_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
-const bool Y_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
+const bool Y_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
 const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
 //#define DISABLE_MAX_ENDSTOPS
 
@@ -260,9 +260,9 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define min_software_endstops true //If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.
 // Travel limits after homing
-#define X_MAX_POS 175
+#define X_MAX_POS 200
 #define X_MIN_POS 0
-#define Y_MAX_POS 180
+#define Y_MAX_POS 210
 #define Y_MIN_POS 0
 #define Z_MAX_POS 200
 #define Z_MIN_POS 0
@@ -286,8 +286,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {79, 79, 4680, 715}  //(80,80,5000,715) I worked out 5000,715) by trial 24sept andrew
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 2, 45}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {64, 64, 4680, 1100}  //6x extruder 1430//(80,80,5000,715) I worked out 5000,715) by trial 24sept andrew
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 2, 178}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,300}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves

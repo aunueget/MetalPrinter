@@ -1,6 +1,5 @@
-MetalPrinter
-============
-Trying to do metal printer
+Marlin Firmware for the O3DE-Prusa I3
+=============
 
 This is a preconfigured Marlin Firmware for the O3DE-Prusa I3. 
 
@@ -16,3 +15,6 @@ Installation Instructions:
 * Open /Marlin/Marlin.ino with the Arduino IDE 
 * set your Boardtype to "Arduino Mega 2560" and select the coresponding serial interface
 * upload the Firmware ( File->Upload )
+
+
+
